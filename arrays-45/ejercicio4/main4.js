@@ -2,26 +2,26 @@
 
 const lista = document.querySelector(".lista")
 
-// const agregarItems = (array) => {
-//     let htmlInterno = ""
+const generarItems = (array) => {
+    let htmlInterno = ""
 
-//     for (let i = 0; i < array.length; i++) {
-//         htmlInterno += `<li>${array[i]}</li>`;  
-//     }
-//     return htmlInterno
-// }
-
-// const nombres = ["Ana", "Elsa", "Olaf", "Sven", "Hans"]
-
-// lista.innerHTML = agregarItems(nombres)
-
-const agregarItems = (array) => {
     for (let i = 0; i < array.length; i++) {
-        lista.innerHTML += `<li>${array[i]}</li>`;  
+        htmlInterno += `<li>${array[i]}</li>`;  
     }
-    return lista.innerHTML
+    return htmlInterno
 }
 
 const nombres = ["Ana", "Elsa", "Olaf", "Sven", "Hans"]
 
-agregarItems(nombres)
+lista.innerHTML = generarItems(nombres)
+
+// const agregarItems = (array) => {
+//     for (let i = 0; i < array.length; i++) {
+//         lista.innerHTML += `<li>${array[i]}</li>`;  
+//     }
+//     return lista.innerHTML
+// }
+
+// const nombres = ["Ana", "Elsa", "Olaf", "Sven", "Hans"]
+
+// agregarItems(nombres)
